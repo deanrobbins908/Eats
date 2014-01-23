@@ -1,0 +1,162 @@
+@import "bootstrap";
+
+/* mixins, variables, etc. */
+
+$grayMediumLight: #eaeaea;
+
+    
+.navbar-custom {
+  background-color: #000000;
+  border-bottom: 1px solid #575757;
+}
+
+
+
+.banner {
+  width: 100%;
+ 	min-height: 450px;
+  padding-top: 20px;
+  margin-top: 40px;
+  border-bottom: 1px solid #575757;
+  color: #ffffff;
+  vertical-align: middle;
+  background-color: #eeeeee;
+  background-image: url('Background.jpg');
+  background-repeat:no-repeat;
+	background-size: 100%;
+  -webkit-border-radius: 0px;
+     -moz-border-radius: 0px;
+          border-radius: 0px;
+h1 {
+	font-size: 2.8em;
+	text-shadow: 1px 2px #000000;
+	text-align: left;
+  font-weight: 110;
+  margin-top: 45px;
+  margin-bottom: 20px;
+  letter-spacing: -.2px;
+	}
+
+h2 {
+	font-size: 1.8em;
+	text-shadow: 2px 2px #000000;
+	font-weight: 110;
+	text-align: left;
+	color: #ffffff;
+  letter-spacing: -.2px;
+}}
+
+.body {
+	background-color: #F0F8FF;
+	min-height: 500px;
+	h1 {
+	font-size: 1.8em;
+	text-align: left;
+  font-weight: 130;
+  color: #575757;
+  margin-top: 25px;
+  
+
+  letter-spacing: -.2px;
+	}
+
+}
+
+
+/* universal */
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  padding-top: 0px;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+  h1 {
+    margin-bottom: 10px;
+  }
+}
+
+/* typography */
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 2em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.2em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: $grayLight;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+
+
+/* header */
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+  line-height: 1;
+  &:hover {
+    color: #6d6a73;
+    text-decoration: none;
+  }
+}
+
+/* footer */
+
+footer {
+  margin-top: 0px;
+  padding-top: 0px;
+  border-top: 1px solid $grayMediumLight;
+  background-color: black;
+  color: black;
+  a {
+    color: $gray;
+    &:hover {
+      color: $grayDarker;
+    }
+  }
+  small {
+    float: left;
+  }
+  ul {
+    float: right;
+    list-style: none;
+    li {
+      float: left;
+      margin-left: 10px;
+    }
+  }
+}
