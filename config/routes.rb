@@ -1,8 +1,10 @@
 Eats::Application.routes.draw do
-get "hosts/new"
+  
+resources :users
+
 
 root  'static_pages#home'
-match '/signup',  to: 'hosts#new',            via: 'get'
+match '/signup',  to: 'users#new',            via: 'get'
 match '/help',    to: 'static_pages#help',    via: 'get'
 match '/about',   to: 'static_pages#about',   via: 'get'
 
