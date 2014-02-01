@@ -6,6 +6,19 @@
         <%= gravatar_for @user %>
         <%= @user.name %>
       </h1>
+
     </section>
   </aside>
+
+<div class="span8">
+    <% if @user.meals.any? %>
+      <h3>Meals (<%= @user.meals.count %>)</h3>
+      <ol class="Meals">
+        <%= render @meals %>
+      </ol>
+
+    <% end %>
+  </div>
+
+
 </div>
