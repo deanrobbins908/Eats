@@ -8,16 +8,18 @@ class UsersController < ApplicationController
     @meals = @user.meals(params[:id])
   end
 
-   def destroy
+  def index
+    @users = User.all
+  end
+
+  def destroy
     User.find(params[:id]).destroy
     flash[:success] = "User deleted."
     redirect_to users_url
   end
 
 
-  def index
-    @users = User.all
-  end
+
 
   def new
   	@user = User.new
