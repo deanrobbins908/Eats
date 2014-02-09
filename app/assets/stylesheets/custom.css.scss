@@ -36,6 +36,8 @@ $grayMediumLight: #eaeaea;
           border-radius: 0px;
 h1 {
 	font-size: 2.8em;
+  line-height: 1em;
+  margin-left: 0px;
 	text-shadow: 1px 2px #000000;
 	text-align: left;
   font-weight: 110;
@@ -46,6 +48,7 @@ h1 {
 
 h2 {
 	font-size: 1.8em;
+  margin-left: 0px;
 	text-shadow: 2px 2px #000000;
 	font-weight: 110;
   color: white;
@@ -96,30 +99,32 @@ textarea {
 
 /* typography */
 
-h1, h2, h3, h4, h5, h6 {
-  line-height: 1;
+p, h1, h2, h3, h4, h5, h6 {
+  line-height: .1em;
+  margin-bottom: 30px;
+  margin-left: 30px;
+
 }
 
 h1 {
   font-size: 2em;
   letter-spacing: -2px;
-  margin-bottom: 30px;
-  text-align: center;
+
+  text-align: left;
   padding-top: 60px;
 }
 
 h2 {
   font-size: 1.2em;
   letter-spacing: -1px;
-  margin-bottom: 30px;
-  text-align: center;
+  text-align: left;
   font-weight: normal;
   color: $grayLight;
 }
 
 p {
   font-size: 1.1em;
-  line-height: 1.7em;
+
 }
 
 
@@ -179,6 +184,7 @@ input, textarea, select, .uneditable-input {
 
 input {
   height: auto !important;
+ 
 }
 
 #error_explanation {

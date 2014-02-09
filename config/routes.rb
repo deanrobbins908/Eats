@@ -1,7 +1,7 @@
 Eats::Application.routes.draw do
   
 resources :users
-resources :meals, only: [:create, :destroy]
+
 resources :sessions, only: [:new, :create, :destroy]
 
 root  'static_pages#home'
