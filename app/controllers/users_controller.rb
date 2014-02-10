@@ -1,11 +1,14 @@
 class UsersController < ApplicationController
-  before_action :signed_in_user, only: [:index, :edit, :update, :destroy]
+  before_action :signed_in_user, only: [:index, :edit, :update, :destroy, :host]
   before_action :correct_user,   only: [:edit, :update]
   before_action :admin_user,     only: :destroy
 
   def show
   	@user = User.find(params[:id])
-  
+    @meals = @user.meals 
+    @meal = current_user.meals.build if signed_in?
+    
+
   end
 
   def index
@@ -18,6 +21,8 @@ class UsersController < ApplicationController
     redirect_to users_url
   end
 
+  def host
+  end
 
 
 
@@ -58,12 +63,7 @@ class UsersController < ApplicationController
 
     # Before filters
 
-    def signed_in_user
-      unless signed_in?
-        store_location
-        redirect_to signin_url, notice: "Please sign in."
-      end
-    end
+
 
     def correct_user
       @user = User.find(params[:id])

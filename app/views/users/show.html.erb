@@ -1,17 +1,24 @@
 <% provide(:title, @user.name) %>
 
-
+<div class= "container" >
 
       <h1>
         <%= gravatar_for @user %>
         <%= @user.name %>
       </h1>
-      <h2><u>Background</u></h2>
-        
-        <p>
+        <h2>
         <%= @user.profile %>
-      </p>
+      </h2>
+
+      <% if @user.meals.any? %>
       
+      
+      <%= render @meals %>   
+    	<% end %>
+
+ 
+</div>
+
 
 
 

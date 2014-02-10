@@ -100,9 +100,9 @@ textarea {
 /* typography */
 
 p, h1, h2, h3, h4, h5, h6 {
-  line-height: .1em;
-  margin-bottom: 30px;
-  margin-left: 30px;
+  line-height: 1em;
+ 
+  
 
 }
 
@@ -116,7 +116,7 @@ h1 {
 
 h2 {
   font-size: 1.2em;
-  letter-spacing: -1px;
+  letter-spacing: -.1px;
   text-align: left;
   font-weight: normal;
   color: $grayLight;
@@ -210,6 +210,26 @@ input {
     &:last-child {
       border-bottom: 1px solid $grayLighter;
     }
+  }
+}
+
+.meals {
+  margin-right: 10px;
+  padding-top: 10px;
+  color: black;
+  h1{
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: bold;
+  line-height: 1;
+  }
+  h2 {
+  font-size: 1.7em;
+  letter-spacing: .2px;
+  text-align: left;
+  font-weight: 110;
+  color: $grayLight;
+
   }
 }
 
