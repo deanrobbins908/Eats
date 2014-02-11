@@ -2,6 +2,7 @@
 	<div class ="meals">
   <h1><%= meal.title %></h1>
 	<h2><%= meal.content %></h2>
+	<h2>$<%= meal.price %></h2>
   <% if current_user?(meal.user) %>
     <%= link_to "delete", meal, method: :delete,
                                      data: { confirm: "You sure?" },

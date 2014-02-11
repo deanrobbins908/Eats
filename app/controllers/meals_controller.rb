@@ -30,7 +30,7 @@ def destroy
 end
 
 def meal_params
-  params.require(:meal).permit(:title, :content)
+  params.require(:meal).permit(:title, :content, :price)
  end
 
 def correct_user

@@ -3,5 +3,6 @@ class Meal < ActiveRecord::Base
 	default_scope -> { order('created_at DESC') }
 	validates :user_id, presence:true
 	validates :title, presence:true, length: { maximum: 140}
-
+	validates :content, presence:true, length: { maximum: 500}
+	validates :price, presence:true
 end

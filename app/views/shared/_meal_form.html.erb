@@ -1,8 +1,12 @@
 <%= form_for(@meal) do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
   <div class="field">
-    <%= f.text_area :title, placeholder: "Meal Title..." %>
-		<%= f.text_area :content, placeholder: "Describe The Meal.." %>
+   <h2> Title 
+    <%= f.text_field :title, placeholder: "e.g. 'Pasta Party Bologna Style.'" %>
+    Your Menu
+		<%= f.text_area :content, placeholder: "eg. 'My meal consists of three courses. First it starts with bacon wrapped dates that are stuffed with goat cheese. Following the appetizer with the main cource I will serve spicy strips of chicken in a delicious sauce consisting of cream, garlic, pepper, butter, and Parmesan cheese served on a bed of fettuccine, with a side salad. Finally for dessert, I have prepared a simple chocolate gelato.'" %>
+		Price Per Person ($)
+		<%= f.number_field :price, placeholder: "eg. '45'"%>
   </div>
   <%= f.submit "Create Meal", class: "btn btn-large btn-primary" %>
 <% end %>
