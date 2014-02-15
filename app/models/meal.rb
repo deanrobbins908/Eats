@@ -5,4 +5,5 @@ class Meal < ActiveRecord::Base
 	validates :title, presence:true, length: { maximum: 140}
 	validates :content, presence:true, length: { maximum: 500}
 	validates :price, presence:true
+	validates :mealtype, presence:true
 end
