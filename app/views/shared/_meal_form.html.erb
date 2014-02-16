@@ -1,6 +1,6 @@
 <%= form_for(@meal) do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
-  <div class="field">
+
    <h2> Title 
     <%= f.text_field :title, placeholder: "e.g. 'Pasta Party Bologna Style.'" %>
     Your Menu
@@ -9,6 +9,8 @@
 		<%= f.number_field :price, placeholder:"USD ($)"%>
 		Meal Type
 		<%= f.select(:mealtype, [['Dinner'], ['Brunch']])%>
-  </div>
+    City Type
+    <%= f.select(:city, [['New York'], ['Seattle']])%>
+
   <%= f.submit "Create Meal", class: "btn btn-large btn-primary" %>
 <% end %>

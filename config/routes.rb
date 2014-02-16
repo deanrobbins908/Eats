@@ -2,7 +2,7 @@ Eats::Application.routes.draw do
   
 resources :users
 resources :sessions, only: [:new, :create, :destroy]
-resources :meals, only: [:new, :create, :destroy]
+resources :meals
 
 root  'static_pages#home'
 match '/signup',  to: 'users#new',            via: 'get'

@@ -41,7 +41,7 @@ h1 {
 	text-shadow: 1px 2px #000000;
 	text-align: left;
   font-weight: 110;
-  margin-top: 45px;
+  margin-top: 20px;
   margin-bottom: 20px;
   letter-spacing: -.2px;
 	}
@@ -218,10 +218,11 @@ input {
   padding-top: 10px;
   color: black;
   h1{
+  padding-top: 10px;
   text-transform: uppercase;
   letter-spacing: -1px;
   font-weight: bold;
-  line-height: 1;
+  line-height: .5;
   }
   h2 {
   font-size: 1.7em;
@@ -233,4 +234,14 @@ input {
   }
 }
 
+.btn-lg {
 
+    padding: 15px 40px;
+    margin-top: 20px;
+    font-size: 50px; //change this to your desired size
+    line-height: normal;
+    -webkit-border-radius: 8px;
+       -moz-border-radius: 8px;
+            border-radius: 8px;
+
+}

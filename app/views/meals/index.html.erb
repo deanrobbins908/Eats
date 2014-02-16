@@ -1,0 +1,26 @@
+<% provide(:title, 'All Meals') %>
+
+<div class="container">
+
+<br>
+<br>
+<br>
+<h2>
+ 
+<%= search_form_for @q do |f| %>
+  <%= f.label "Cities"%>
+	<%= check_box_tag "q[city_in][]", "Seattle" %> Seattle <br>
+	<%= check_box_tag "q[city_in][]", "New York" %> New York <br>
+	<br>
+	<%= f.label "Meal Description Includes:"%>
+  <%= f.text_field :title_cont, placeholder: "eg 'Pasta'" %>
+	<%= f.submit %>
+<% end %>
+</h2>
+
+<h1>TOTAL MEALS: <%=@meals.count %> </h1>
+
+<%= render @meals %>
+
+
+</div>

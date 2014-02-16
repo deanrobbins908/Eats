@@ -4,6 +4,8 @@ before_action :correct_user,   only: :destroy
 
 
 def index
+  @q = Meal.search(params[:q])
+  @meals = @q.result(distinct:true)
 end
 
 def new
@@ -30,7 +32,7 @@ def destroy
 end
 
 def meal_params
-  params.require(:meal).permit(:title, :content, :price, :mealtype)
+  params.require(:meal).permit(:title, :content, :price, :mealtype, :city)
  end
 
 def correct_user
