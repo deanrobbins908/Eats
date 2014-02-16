@@ -1,27 +1,39 @@
 <% provide(:title, @user.name) %>
 
+
 <div class= "container" >
-    <div class="row">
+  <div class = "general">
+    <div class= "row">
       <div class="col-md-3">
-      <h1>
+        
+        <h1>
         <%= gravatar_for @user %>
         <%= @user.name %>
-      </h1>
-        <h2>
-        <%= @user.profile %>
-      </h2>
+        </h1>
 
-      <% if @user.meals.any? %>
       </div>
+     
       <div class="col-md-9">
-      
-      <%= render @meals %>   
+      <h1> Eat With <%= @user.name %> </h1>
+
+              <% if @user.profile? %>
+          
+          <%= @user.profile %>  
+          <% end %>
+
+
+        
+      <% if @user.meals.any? %>
+
+      <h1> My Offerings </h1>
+      <%= render @meals %>
     	<% end %>
+    
 
  </div>
 </div>
-
-
+</div>
+</div>
 
 
 

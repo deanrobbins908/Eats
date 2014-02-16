@@ -18,7 +18,7 @@ def create
 
 	@meal = current_user.meals.build(meal_params)
     if @meal.save
-      flash[:success] = "Micropost created!"
+      
       redirect_to @meal.user
     else
       redirect_to @meal.user
