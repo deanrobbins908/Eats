@@ -1,29 +1,18 @@
  
-	<div class ="meals">
-    <div class = "thumbnail" <div>
-      
-      <%= image_tag "Background.jpg" %>
-      
-        <h4><%= meal.title %></h4>
-        
-<h2> By: <%=meal.user[:name] %> | <%= meal.city %> <h2>
-      
-  
-      
 
-	   <h2>Price Per Person: $<%= meal.price %><br><br>
-      
-	
-  <% if current_user?(meal.user) %>
+    
+    <div class="col-md-6">
+    <div class = "thumbnail">
+      <%= image_tag  ("Background.jpg") %>
+      <h4><%= meal.title %></h4>
 
-    <%= link_to "delete", meal, method: :delete,
-                                     data: { confirm: "You sure?" },
-                                     ohboy: meal.title %>
-
-
-  <% end %></h2>
-</div>
-</div>
+      <h2>By: <%=meal.user[:name] %> | <%= meal.city %> 
+         <br> Price Per Person: $<%= meal.price %></br>
+      </h2>
+    
+    </div>
+    </div>
+	  
 
 
 

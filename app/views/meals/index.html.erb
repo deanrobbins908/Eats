@@ -1,16 +1,11 @@
 <% provide(:title, 'All Meals') %>
-
+<div class ="main">
 <div class="container">
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+
 
 	<div class="row">
-  	<div class="col-md-2">
+  	<div class="col-md-3"> <h4>
   	<%= search_form_for @q do |f| %>
   		<%= f.label "Cities"%>
 			<%= check_box_tag "q[city_in][]", "Seattle" %> Seattle <br>
@@ -21,11 +16,15 @@
 			<%= f.submit %>
 		<% end %>		
 		</div>
-	<div class="col-md-5">
-		<div class="homeheader">
-<h1>Total Meals: <%=@meals.count %> </h1> </div>
-		<%= render @meals %>
-	</div>
-	</div>
+	</h4>
 
+		<div class="col-md-9">
+
+		<%= render @meals %>
+	
+		</div>
+
+	</div>	
+
+</div>
 </div>

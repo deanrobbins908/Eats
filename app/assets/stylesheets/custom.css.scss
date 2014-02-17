@@ -100,7 +100,7 @@ html {
 }
 
 body {
-  padding-top: 0px;
+  padding-top: 50px;
 
 }
 
@@ -123,8 +123,8 @@ textarea {
 
 p, h1, h2, h3, h4, h5, h6 {
   line-height: 1em;
- 
-  
+
+  margin-top: 0px;
 
 }
 
@@ -132,7 +132,8 @@ h1 {
   font-size: 2em;
   letter-spacing: -2px;
   text-align: left;
-  padding-top: 0px;
+
+
 }
 
 h2 {
@@ -169,6 +170,13 @@ p {
     text-decoration: none;
   }
 }
+
+
+.main {
+  
+  padding-top: 20px;
+}
+
 
 /* footer */
 
@@ -252,9 +260,14 @@ input {
 
 
 .thumbnail:hover {
--webkit-filter: grayscale(30%);
+-webkit-filter: grayscale(50%);
 
 }
+.col-md-4 {
+padding-left: 15px;
+padding-right: 2px;
+}
+
 
 .jumbotron {
 
@@ -275,27 +288,27 @@ input {
 .highlight {
 
   vertical-align: middle;
-  margin-top: 0px;
+  margin-top: -60px;
   margin-bottom: 10px;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
   padding-right: 5px;
   padding-left: 5px;
-  padding-top: 0px;
+  padding-top: 50px;
   background-color: black;
-  opacity:0.6;
-  filter:alpha(opacity=60);
+  opacity:0.8;
+  filter:alpha(opacity=55);
   position: relative;
-  width: 25%;
+  width: 30%;
   height: 100%;
   border-bottom-right-radius:.5em;
-  border-bottom-left-radius:.5em;
-  border-right: 3px solid #575757;
-  border-left: 3px solid #575757;
-  border-bottom: 3px solid #575757;
+  border-bottom-left-radius:.5em; 
+  border-right: 1px solid green;
+  border-left: 1px solid green;
+  border-bottom: 1px solid green;
 
 h1 {
   font-size: 2.5em;
-  padding-top: 40px;
+  padding-top: 0px;
   text-align:center;
   color: white;
   font-weight: 300;

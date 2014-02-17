@@ -1,54 +1,72 @@
 <% provide(:title, @user.name) %>
 
-
+<div class = "main">
 <div class= "container" >
-  <div class = "general">
+
     <div class= "row">
-      <div class="col-md-2">
+      <div class="col-md-3">
         
-        <h2>
-      
-        <%= @user.name %>
-        </h2>
-
-      </div>
-     
-      <div class="col-md-10">
-      <h1> Eat With <%= @user.name %> </h1>
-
-              <% if @user.profile? %>
+  <h1> Eat With <%= @user.name %> </h1>
+     <% if @user.profile? %>
           
           <%= @user.profile %>  
           <% end %>
 
-
- <% if @user.meals.any? %><h1> My Offerings </h1>
-
-
-   
-     <div class="col-md-5">
-    <%= render @meals %>
       </div>
+     
+      <div class="col-md-9">
+      
+
+         
+
+ <% if @user.meals.any? %>
 
 
-         <div class="col-md-5">
-    <%= render @meals %>
+    
+    <% @meals.each do |meal| %>
+    <div class="col-md-6">
+      <div class = "thumbnail">
+        <%= image_tag  ("Background.jpg") %>
+        <h4><%= meal.title %></h4>
+        <h2> By: <%=meal.user[:name] %> | <%= meal.city %> <h2>
+
+   <h2>Price Per Person: $<%= meal.price %><br><br>
+      
+  
+  <% if current_user?(meal.user) %>
+
+    <%= link_to "delete", meal, method: :delete,
+                                     data: { confirm: "You sure?" },
+                                     ohboy: meal.title %>
+
+
+  <% end %></h2>
+
+
+
       </div>
+    </div>
+    <% end %>
+
+
+
+    
+
+
 
  
     </div>
       
-        
 
       
     	<% end %>
    
-
+<% render @meals %>
 
 </div>
 </div>
 </div>
-
+</div>
 
 
 
