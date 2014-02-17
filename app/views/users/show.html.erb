@@ -4,16 +4,16 @@
 <div class= "container" >
   <div class = "general">
     <div class= "row">
-      <div class="col-md-3">
+      <div class="col-md-2">
         
-        <h1>
-        <%= gravatar_for @user %>
+        <h2>
+      
         <%= @user.name %>
-        </h1>
+        </h2>
 
       </div>
      
-      <div class="col-md-9">
+      <div class="col-md-10">
       <h1> Eat With <%= @user.name %> </h1>
 
               <% if @user.profile? %>
@@ -22,15 +22,29 @@
           <% end %>
 
 
+ <% if @user.meals.any? %><h1> My Offerings </h1>
+
+
+   
+     <div class="col-md-5">
+    <%= render @meals %>
+      </div>
+
+
+         <div class="col-md-5">
+    <%= render @meals %>
+      </div>
+
+ 
+    </div>
+      
         
-      <% if @user.meals.any? %>
 
-      <h1> My Offerings </h1>
-      <%= render @meals %>
+      
     	<% end %>
-    
+   
 
- </div>
+
 </div>
 </div>
 </div>

@@ -10,7 +10,7 @@
 <br>
 
 	<div class="row">
-  	<div class="col-md-3">
+  	<div class="col-md-2">
   	<%= search_form_for @q do |f| %>
   		<%= f.label "Cities"%>
 			<%= check_box_tag "q[city_in][]", "Seattle" %> Seattle <br>
@@ -19,10 +19,11 @@
 			<%= f.label "Meal Description Includes:"%><br>
   		<%= f.text_field :title_cont, placeholder: "eg 'Pasta'" %><br>
 			<%= f.submit %>
-		<% end %>		<h1>TOTAL MEALS: <%=@meals.count %> </h1>
+		<% end %>		
 		</div>
-	<div class="col-md-9">
-
+	<div class="col-md-5">
+		<div class="homeheader">
+<h1>Total Meals: <%=@meals.count %> </h1> </div>
 		<%= render @meals %>
 	</div>
 	</div>

@@ -84,7 +84,7 @@ $grayDarker: #eaeaea;
   }
 }
 .bordertop{
-  top-bottom: 1px solid #575757;
+  top-bottom: 10px solid #575757;
 }
 
 
@@ -145,8 +145,10 @@ h2 {
   letter-spacing: 0px;
 }
 
+
 p {
   font-size: 1.1em;
+  color: #575757;
 
 }
 
@@ -171,10 +173,12 @@ p {
 /* footer */
 
 footer {
-  margin-top: 0px;
+margin-top: 100px;
+
   padding-top: 0px;
+  height: 100px;
   border-top: 1px solid $grayMediumLight;
-  background-color: black;
+  background-color: #F9F6F4;
   color: black;
   a {
     color: $gray;
@@ -247,6 +251,11 @@ input {
 
 
 
+.thumbnail:hover {
+-webkit-filter: grayscale(30%);
+
+}
+
 .jumbotron {
 
   
@@ -258,6 +267,7 @@ input {
  
   background-color: white;
   background-size: cover;
+
 
  
  }
@@ -311,10 +321,14 @@ h2 {
 
 }
 
+ 
+  
+
+
 .btn-group {
     vertical-align: middle;
-       
-    margin-left: 62px;
+       padding: 20%;
+    
     margin-bottom: 0px;
     padding-bottom: 0px;
     width: 100%;

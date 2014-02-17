@@ -1,9 +1,19 @@
  
 	<div class ="meals">
-  <h1><%= meal.title %></h1>
-	<h2><%= meal.content %></h2>
-	<h2>$<%= meal.price %></h2>
-	<h2><%= meal.city %></h2>
+    <div class = "thumbnail" <div>
+      
+      <%= image_tag "Background.jpg" %>
+      
+        <h4><%= meal.title %></h4>
+        
+<h2> By: <%=meal.user[:name] %> | <%= meal.city %> <h2>
+      
+  
+      
+
+	   <h2>Price Per Person: $<%= meal.price %><br><br>
+      
+	
   <% if current_user?(meal.user) %>
 
     <%= link_to "delete", meal, method: :delete,
@@ -11,8 +21,8 @@
                                      ohboy: meal.title %>
 
 
-  <% end %>
-
+  <% end %></h2>
+</div>
 </div>
 
 
