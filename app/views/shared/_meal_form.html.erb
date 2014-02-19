@@ -6,7 +6,7 @@
     Your Menu
 		<%= f.text_area :content, size: "30x6", placeholder: "eg. 'My meal consists of three courses. First it starts with bacon wrapped dates that are stuffed with goat cheese. Following the appetizer with the main cource I will serve spicy strips of chicken in a delicious sauce consisting of cream, garlic, pepper, butter, and Parmesan cheese served on a bed of fettuccine, with a side salad. Finally for dessert, I have prepared a simple chocolate gelato.'" %>
 		Price Per Person 
-		<%= f.number_field :price, placeholder:"USD ($)"%>
+		<%= f.number_field :price, placeholder:"Number only. eg '20'"%>
 		Meal Type
 		<%= f.select(:mealtype, [['Dinner'], ['Brunch']])%>
     City Type
