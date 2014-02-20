@@ -3,10 +3,10 @@
     
     <div class="col-md-6">
     <div class = "thumbnail">
-      <%= image_tag  ("Background.jpg") %>
+      <%= image_tag  ("Background.jpg")%>
       <h4><%= meal.title %></h4>
 
-      <h2>By: <%=meal.user[:name] %> | <%= meal.city %> 
+      <h2>By: <%=link_to meal.user[:name], meal %> | <%= meal.city %> 
          <br> Price Per Person: $<%= meal.price %></br>
       </h2>
     

@@ -1,0 +1,17 @@
+
+
+<div class = "main">
+<div class= "container" >
+
+
+<h4> <%= @meal.title %> </h4>
+<%= @meal.content %>
+<br>
+Price: $<%= @meal.price %>
+<br>
+By: <%= link_to @meal.user[:name], @user %>
+</div>
+</div>
+
+
+
