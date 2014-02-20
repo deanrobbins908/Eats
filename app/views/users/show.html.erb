@@ -35,7 +35,7 @@
   
   <% if current_user?(meal.user) %>
 
-    <%= link_to "delete", meal, method: :delete,
+    <%= link_to " Delete", meal, class: "fa fa-trash-o fa-lg", method: :delete,
                                      data: { confirm: "You sure?" },
                                      ohboy: meal.title %>
 
