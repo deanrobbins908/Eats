@@ -1,20 +1,24 @@
- 
 
+    <div class="col-sm-4 col-md-4">  
+      <div class= "thumbnail center">
+          <%= image_tag  ("Background.jpg")%> 
+       
+      </div>
     
-    <div class="col-md-6">
-    <div class = "thumbnail">
-      <%= image_tag  ("Background.jpg")%>
-      <h4><%= meal.title %></h4>
+     
+      <div class = "mealthumbnails"> 
+       
+        
+      <h1><%= meal.title%></h1>
+      <p><%= meal.content %></p>
+      <p> By: <%=link_to meal.user[:name], meal %> | <%= meal.city %> </p>
+    <p><%= meal.price %></p>
+    
+      </div>
 
-      <h2>By: <%=link_to meal.user[:name], meal %> | <%= meal.city %> 
-         <br> Price Per Person: $<%= meal.price %></br>
-      </h2>
-    
-    </div>
-    </div>
+  </div>
 	  
 
 
-
-     
-
+      
+  

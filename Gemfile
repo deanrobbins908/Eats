@@ -7,6 +7,7 @@ gem 'bootstrap-sass', '3.1.1'
 gem 'bcrypt-ruby', '3.1.2'
 gem 'faker', '1.1.2'
 gem "ransack", github: "activerecord-hackery/ransack", branch: "rails-4"
+gem "paperclip", "~> 4.1"
 
 group :development, :test do
   gem 'sqlite3', '1.3.8'

@@ -19,13 +19,14 @@
           <ul class="dropdown-menu">
             <li><%= link_to " My Dashboard  ", current_user, class: "fa fa-home fa-fw" %></li>
             <li><%= link_to " Edit Profile", edit_user_path(current_user), class: "fa fa-pencil fa-fw" %></li>
+            <li><%= link_to " Create a Meal", new_meal_path, class: "fa fa-pencil fa-fw" %></li>
             <li class="divider"></li>
             <li> <%= link_to " Sign out", signout_path, class: "fa fa-ban fa-fw",method: "delete" %></li>
           </ul>
         </li>
         <% else %>
-        <li><%= link_to "Sign Up Today",    signup_path %></li>
-        <li><%= link_to "Already a Member?",          signin_path %></li>
+        <li><%= link_to "SIGN UP",    signup_path %></li>
+        <li><%= link_to "LOGIN",          signin_path %></li>
         <% end %>
       </ul>
     </div><!-- /.navbar-collapse -->

@@ -10,7 +10,7 @@
     <%= render 'layouts/shim' %>
    
   </head>
-
+  <body>
 
     <%= render 'layouts/header' %>
     <div class="container">
@@ -18,11 +18,14 @@
         <div class="alert alert-<%= key %>"><%= value %>
         </div>
     <% end %>
-  </div>
-  
-  <div class = "body">
-  <%= yield %> 
-</div>
+    </div>
 
-  
+
+  <%= yield %> 
+
+   
+
+   <%= render 'layouts/footer' %>
+
+  </body>
 </html>
